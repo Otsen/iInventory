@@ -1,0 +1,66 @@
+body{
+    background: url('bg.jpg')no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#wrapper {
+    min-width: 700px;
+    background: none;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    border: none;
+}
+a{
+    color:white;
+    text-decoration: none;
+    font-size: 16;
+}
+div{
+    float: left;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 10px; 
+    border: 1px solid white;
+}
+.head{
+    width: 80%;
+    margin-left: 10%;
+    height: 100%;
+    display: flex;
+}
+#logo{
+    height: 50px;
+    float: left;
+}
+.nav{
+    font-size: 15px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    border-top: none;
+    font-size: larger;
+}
+.sidenav{
+    overflow-x: auto;
+    align-content: center;
+    width: 10.4%;
+    margin-left: 10%;
+    border-top: none;
+    height: 40em;
+}
+.content{
+    overflow-x: auto;
+    width: 69.5%;
+    border-top: none;
+    border-left: none;
+    height: 40em;
+}
+.logolabel{
+    color: white;
+    font-size: 50px;
+}
