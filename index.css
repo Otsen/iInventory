@@ -64,3 +64,9 @@ div{
     color: white;
     font-size: 50px;
 }
+.sidenav button{
+    background-color: black; 
+    border-color: black; 
+    color: white; 
+    font-size: large;
+}

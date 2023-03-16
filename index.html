@@ -2,12 +2,23 @@
 <html>
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#mac').click(function () {
+                $('#content').load("http://localhost/iInventory/content.html");
+            });
+        });
+    </script>
     <head>
-        <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"> -->
         <title>
             Apple-Inventory
         </title>
     </head>
+
     <body>
     <div id="wrapper">
         <div class="head">
@@ -15,19 +26,19 @@
             <label class="logolabel" vspace="10px">iInventory</label>
         </div>
         <div class="nav">
-            <pre style="font-size: large;"><a href="#" style="float: center;">HOME</a>  |  <a href="#" style="float: center;">ABOUT US</a></pre>
+            <pre style="font-size: large;"><a href="http://localhost/iInventory/index.html" style="float: center;">HOME</a>  |  <a href="#" style="float: center;">ABOUT US</a></pre>
         </div>
         <div class="sidenav">
             <pre style="font-size: large; align-content: center;">GO TO<hr></pre>
-            <pre style="font-size: large; align-content: right; text-align: left;">
-<a href="#"> >> Mac</a>
-<br><a href="#"> >> iPad</a>
-<br><a href="#"> >> iPhone</a>
-<br><a href="#"> >> Watch</a>
-<br><a href="#"> >> AirPods</a>
-<br><a href="#"> >> TV & Home</a>
-<br><a href="#"> >> Services</a>
-<br><a href="#"> >> Accessories</a>
+            <pre style="font-size: large; align-content: center; text-align: center;">
+<button id="mac"> >> Mac</button>
+<br><button id="ipad"> >> iPad</button>
+<br><button id="iphone"> >> iPhone</button>
+<br><button id="watch"> >> Watch</button>
+<br><button id="airpods"> >> AirPods</button>
+<br><button id="tv&home"> >> TV & Home</button>
+<br><button id="services"> >> Services</button>
+<br><button id="accessories"> >> Accessories</button>
             </pre>
         </div>
         <div class="content" id="content">
@@ -76,6 +87,8 @@
                 advertisement.
             </div>
         </div>
+        
     </div>
     </body>
+    
 </html>
