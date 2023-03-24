@@ -5,14 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
     <script>
-        $(document).ready(function () {
-            $('#mac').click(function () {
-                $('#content').load("http://localhost/iInventory/content.html");
+        function change(id){
+            $(document).ready(function () {
+                // let url="http://localhost/iInventory/";
+                // url=url.concat("",id);
+                // url=url.concat("",".php");
+                // $('#content').load(url);
+                $('#content').load("http://localhost/iInventory/content.php");
             });
-        });
+        }
     </script>
+    
     <head>
+        
         <title>
             Apple-Inventory
         </title>
@@ -29,15 +36,15 @@
         </div>
         <div class="sidenav">
             <pre style="font-size: large; align-content: center;">GO TO<hr></pre>
-            <pre style="width: 100%;font-size: large; align-content: center; text-align: center;">
-<button id="mac"> >> Mac</button>
-<br><button id="ipad"> >> iPad</button>
-<br><button id="iphone"> >> iPhone</button>
-<br><button id="watch"> >> Watch</button>
-<br><button id="airpods"> >> AirPods</button>
-<br><button id="tv&home"> >> TV & Home</button>
-<br><button id="services"> >> Services</button>
-<br><button id="accessories"> >> Accessories</button>
+            <pre style="width: 100%;font-size: large; align-content: center; text-align: center;"><form action="content.php" method="get">
+<button id="mac" name="id" value="mac" onclick="change(this.id)"> >> Mac</button>
+<br><button id="ipad" name="id" value="ipad" onclick="change(this.id)"> >> iPad</button>
+<br><button id="iphone" onclick="change(this.id)"> >> iPhone</button>
+<br><button id="watch" onclick="change(this.id)"> >> Watch</button>
+<br><button id="airpods" onclick="change(this.id)"> >> AirPods</button>
+<br><button id="tv&home" onclick="change(this.id)"> >> TV & Home</button>
+<br><button id="services" onclick="change(this.id)"> >> Services</button>
+<br><button id="accessories" onclick="change(this.id)"> >> Accessories</button></form>
             </pre>
         </div>
         <div class="content" id="content">
