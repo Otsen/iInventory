@@ -9,11 +9,9 @@
     <script>
         function change(id){
             $(document).ready(function () {
-                // let url="http://localhost/iInventory/";
-                // url=url.concat("",id);
-                // url=url.concat("",".php");
-                // $('#content').load(url);
-                $('#content').load("http://localhost/iInventory/content.php");
+                let url="http://localhost/iInventory/content.php?id=";
+                url=url.concat("",id);
+                $('#content').load(url);
             });
         }
     </script>
@@ -36,7 +34,7 @@
         </div>
         <div class="sidenav">
             <pre style="font-size: large; align-content: center;">GO TO<hr></pre>
-            <pre style="width: 100%;font-size: large; align-content: center; text-align: center;"><form action="content.php" method="get">
+            <pre style="width: 100%;font-size: large; align-content: center; text-align: center;">
 <button id="mac" name="id" value="mac" onclick="change(this.id)"> >> Mac</button>
 <br><button id="ipad" name="id" value="ipad" onclick="change(this.id)"> >> iPad</button>
 <br><button id="iphone" onclick="change(this.id)"> >> iPhone</button>
@@ -44,10 +42,10 @@
 <br><button id="airpods" onclick="change(this.id)"> >> AirPods</button>
 <br><button id="tv&home" onclick="change(this.id)"> >> TV & Home</button>
 <br><button id="services" onclick="change(this.id)"> >> Services</button>
-<br><button id="accessories" onclick="change(this.id)"> >> Accessories</button></form>
+<br><button id="accessories" onclick="change(this.id)"> >> Accessories</button>
             </pre>
         </div>
-        <div class="content" id="content">
+        <div class="content" id="content" name="content">
             <div style="border: none; text-align: center; width: 15.3%; margin-left: 25px;">
                 <img src="stevej.jpg" style="border-radius: 11%; width: 100%;height:100%; border: 2px solid white; float: left;" vspace="20px">
                 <p>STEVE JOBS</p>
