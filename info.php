@@ -18,14 +18,15 @@
                 $db = mysqli_select_db($connection,"iInventory")
                 or die ("Couldn't select database");
 
-                $query = "SELECT * FROM {$tablename} WHERE S_No = {$sno}";
+                $query = "SELECT * FROM {$tablename} WHERE S_no = {$sno}";
                 $result = mysqli_query($connection,$query)
                 or die("Query failed: ".mysqli_error($connection));
                 
                 echo ("<ul>");
                 
                 while ($row = mysqli_fetch_array($result)){
-                    echo "<li>",$row['S_No'],"&emsp;",$row['Name'],"</li>";
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode($row['Image']).'" width=100px/>';
+                    // echo "<li>",$row['S_no'],"&emsp;",$row['Image'],"</li>";
                 }
                 echo "</ul>";
 

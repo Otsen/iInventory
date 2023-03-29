@@ -10,17 +10,11 @@
         <script>
             function change2(tablename,sno){
                 $(document).ready(function () {
-                    // let x="#";
-                    // x=x.concat("",table)
-                    // console.log(x);
-                    // $(x).click(function(){
-                        // console.log(id);
                         let url="http://localhost/iInventory/info.php?tablename=";
                         url=url.concat("",tablename);
                         url=url.concat("&sno=",sno);
-                        // console.log(url);
                         $('#content').load(url);
-                    // });
+                        // console.log(url)
                 });
             }
         </script>
@@ -41,11 +35,10 @@
                 $result = mysqli_query($connection,$query)
                 or die("Query failed: ".mysqli_error($connection));
 
-                // echo "S_NO    NAME <br>";
                 echo ("<br>");
                 echo ("<ul>");
                 while ($row = mysqli_fetch_array($result)){
-                    $sno=$row['S_No'];
+                    $sno=$row['S_no'];
                     echo "<button style='background-color: black; 
                     border: 1px solid red;
                     border-left: none;
