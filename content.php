@@ -14,6 +14,7 @@
                         url=url.concat("",tablename);
                         url=url.concat("&sno=",sno);
                         $('#content').load(url);
+                        // console.log(url);
                 });
             }
         </script>
@@ -38,13 +39,13 @@
                 echo ("<h2 style='float: center;color: white;'>MODELS</h1>");
                 echo ("<div style='float: left; border: none;'><ul>");
                 while ($row = mysqli_fetch_array($result)){
-                    $sno=$row['S_no'];
+                    $sno=$row['Serial_Number'];
                     echo "<button style='background-color: black; 
                     border: none;
                     border-bottom: 2px solid aqua;
                     border-radius: 20px;
                     color: white; 
-                    font-size: large;' id='$tablename' name='$sno' onclick='change2(this.id,this.name)'>",$row['S_no'],".)&emsp;",$row['Name'],"</button><br><br>";
+                    font-size: large;' id='$tablename' name='$sno' onclick='change2(this.id,this.name)'>",$row['Serial_Number'],".)&emsp;",$row['Name'],"&emsp;</button><br><br>";
                 }
                 echo "</ul></div>";
 
