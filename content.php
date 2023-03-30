@@ -14,7 +14,6 @@
                         url=url.concat("",tablename);
                         url=url.concat("&sno=",sno);
                         $('#content').load(url);
-                        // console.log(url)
                 });
             }
         </script>
@@ -36,18 +35,18 @@
                 or die("Query failed: ".mysqli_error($connection));
 
                 echo ("<br>");
-                echo ("<ul>");
+                echo ("<h2 style='float: center;color: white;'>MODELS</h1>");
+                echo ("<div style='float: left; border: none;'><ul>");
                 while ($row = mysqli_fetch_array($result)){
                     $sno=$row['S_no'];
                     echo "<button style='background-color: black; 
-                    border: 1px solid red;
-                    border-left: none;
-                    border-right: none;
+                    border: none;
+                    border-bottom: 2px solid aqua;
                     border-radius: 20px;
                     color: white; 
-                    font-size: large;' id='$tablename' name='$sno' onclick='change2(this.id,this.name)'>",$row['S_No'],"&emsp;->&emsp;",$row['Name'],"</button><br>";
+                    font-size: large;' id='$tablename' name='$sno' onclick='change2(this.id,this.name)'>",$row['S_no'],".)&emsp;",$row['Name'],"</button><br><br>";
                 }
-                echo "</ul>";
+                echo "</ul></div>";
 
                 mysqli_close($connection);
             ?>

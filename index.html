@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +24,7 @@
 
     <body>
     <div id="wrapper">
+    <div class="fixnav">
         <div class="head">
             <img src="logo.png" id="logo" vspace="6px" hspace="5px">
             <label class="logolabel" vspace="10px">iInventory</label>
@@ -32,48 +32,51 @@
         <div class="nav">
             <pre style="font-size: large; color: white;"><a href="http://localhost/iInventory/index.html" style="float: center; color: aqua;">HOME</a>  |  <a href="#" style="float: center; color: aqua">ABOUT US</a></pre>
         </div>
+    </div>
         <div class="sidenav">
             <pre style="font-size: large; align-content: center;">GO TO<hr></pre>
             <pre style="width: 100%;font-size: large; align-content: center; text-align: center;">
 <button id="mac" name="id" value="mac" onclick="change(this.id)"> >> Mac</button>
-<br><button id="ipad" name="id" value="ipad" onclick="change(this.id)"> >> iPad</button>
-<br><button id="iphone" name="id" value="iphone" onclick="change(this.id)"> >> iPhone</button>
-<br><button id="watch" name="id" value="watch" onclick="change(this.id)"> >> Watch</button>
+<br><button id="ipads" name="id" value="ipads" onclick="change(this.id)"> >> iPad</button>
+<br><button id="iphones" name="id" value="iphones" onclick="change(this.id)"> >> iPhone</button>
+<br><button id="watches" name="id" value="watches" onclick="change(this.id)"> >> Watch</button>
 <br><button id="airpods" name="id" value="airpods" onclick="change(this.id)"> >> AirPods</button>
 <br><button id="tv&home" name="id" value="tv&home" onclick="change(this.id)"> >> TV & Home</button>
+<br><button id="ipods" name="id" value="ipods" onclick="change(this.id)"> >> Services</button>
+<br><button id="printers" name="id" value="printers" onclick="change(this.id)"> >> Services</button>
 <br><button id="services" name="id" value="services" onclick="change(this.id)"> >> Services</button>
 <br><button id="accessories" name="id" value="accessories" onclick="change(this.id)"> >> Accessories</button>
             </pre>
         </div>
         <div class="content" id="content" name="content">
-            <div style="border: none; text-align: center; width: 15.3%; margin-left: 25px;">
+            <div style="border: none;background:none; text-align: center; width: 15.3%; margin-left: 25px;">
                 <img src="stevej.jpg" style="border-radius: 11%; width: 100%;height:100%; border: 2px solid white; float: left;" vspace="20px">
                 <p>STEVE JOBS</p>
             </div>
             
-            <div style="border: none; text-align: center; width: 18%; margin-left: 25px;">
+            <div style="border: none;background:none; text-align: center; width: 18%; margin-left: 25px;">
                 <img src="stevew.jpg" style="border-radius: 11%; width: 100%;height:100%; border: 2px solid white; float: left;" vspace="20px">
                 <p>STEVE WOZNIAK</p>
             </div>
             
-            <div style="border: none; text-align: center; width: 15.3%; margin-left: 25px;">
+            <div style="border: none;background:none; text-align: center; width: 15.3%; margin-left: 25px;">
                 <img src="ronaldw.jpg" style="border-radius: 11%; height:100%;width: 100%; border: 2px solid white; float: left;" vspace="20px">
                 <p>RONALD WAYNE</p>
             </div>
             
-            <div class="front-info" style="border-radius: 20px; border: 2px dashed pink ;float: right;margin-left: 18px; margin-right: 10px; margin-top: 20px;text-align: left;">
-                <pre style="font-size: 14px;">  <u>Formerly</u> : Computer Company (1976-1977)
+            <div class="front-info" style="border-radius: 20px;background:none; border: 2px dashed pink ;padding: 0%;float: right;margin-left: 18px; margin-right: 10px; margin-top: 20px;text-align: left;">
+                <pre style="font-size: 14px;font-weight:bolder;">  <u>Formerly</u> : Computer Company (1976-1977)
              Apple Computer, Inc. (1977-2007) <hr></pre>
-                <pre style="font-size: 14px;">  <u>Founded</u> : April 1, 1976; 46 years ago
-            in Los Altos, California, U.S.<hr></pre>
-                <pre style="font-size: 14px;">  <u>Founders</u> : Steve Jobs
+                <pre style="font-weight:bolder;">  <u>Founded</u> : April 1, 1976; 46 years ago
+            in Los Altos, California, U.S. <hr></pre>
+                <pre style="font-weight:bolder;">  <u>Founders</u> : Steve Jobs
              Steve Wozniak
-             Ronald Wayne<hr></pre>
-                <pre style="font-size: 14px;">  <u>Headquarters</u> : 1 Apple Park Way, 
+             Ronald Wayne <hr></pre>
+                <pre style="font-weight:bolder;">  <u>Headquarters</u> : 1 Apple Park Way, 
                  Cupertino, California, U.S.</pre>
             </div>
             
-            <div class="main-info" style="text-align: left;border: none;margin: 4%; font-size: 19px;">
+            <div class="main-info" style="text-align: left;background:none;border: none;margin: 4%; font-size: 19px;">
                 Apple Inc. is an American multinational technology company headquartered in Cupertino, 
                 California. Apple was founded as Apple Computer Company on April 1, 1976, by Steve Wozniak, 
                 Steve Jobs and Ronald Wayne to develop and sell Wozniak's Apple I personal computer. 
