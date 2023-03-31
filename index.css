@@ -1,3 +1,7 @@
+::-webkit-scrollbar{
+    background: black;
+    width: 0;
+}
 body{
     background: url('bg.jpg')no-repeat;
     height: 10%;
@@ -23,9 +27,9 @@ div{
     float: left;
     text-align: center;
     color: white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.816);
     border-radius: 10px; 
-    border: 1px solid white;
+    border: 1px solid antiquewhite;
 }
 .fixnav{
     z-index: 1;
@@ -76,7 +80,7 @@ div{
     font-size: 400%;
 }
 .sidenav button{
-    background-color: black; 
+    background-color: rgba(0, 0, 0, 0.544); 
     border: 2px solid rgb(25, 235, 14);
     border-top: none;
     border-radius: 20px;

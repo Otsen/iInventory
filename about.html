@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script>
+        function change(id){
+            $(document).ready(function () {
+                let url="http://localhost/iInventory/content.php?id=";
+                url=url.concat("",id);
+                $('#content').load(url);
+            });
+        }
+    </script>
+    
+    <head>
+        
+        <title>
+            Apple-Inventory
+        </title>
+    </head>
+
+    <body>
+    <div id="wrapper">
+    <div class="fixnav">
+        <div class="head">
+            <img src="logo.png" id="logo" vspace="6px" hspace="5px">
+            <label class="logolabel" vspace="10px">iInventory</label>
+        </div>
+        <div class="nav">
+            <pre style="font-size:17px; color: white;"><a href="http://localhost/iInventory/index.html" style="float: center;text-decoration:overline; color: aqua;">HOME</a>  |  <a href="#" style="float: center;text-decoration:overline; color: aqua">ABOUT US</a></pre>
+        </div>
+    </div>
+        <div class="sidenav">
+            <pre style="text-decoration:overline;color: yellow;font-size: 20px; align-content: center;">GO TO<hr></pre>
+            <pre style="width: 100%;font-size: large; align-content: center; text-align: center;">
+<button id="mac" name="id" value="mac" onclick="change(this.id)">  Mac  </button>
+<br><button id="ipads" name="id" value="ipads" onclick="change(this.id)">  iPad  </button>
+<br><button id="iphones" name="id" value="iphones" onclick="change(this.id)">  iPhone  </button>
+<br><button id="watches" name="id" value="watches" onclick="change(this.id)">  Watch  </button>
+<br><button id="airpods" name="id" value="airpods" onclick="change(this.id)">  AirPods  </button>
+<br><button id="tv&home" name="id" value="tv&home" onclick="change(this.id)">  TV & Home  </button>
+<br><button id="ipods" name="id" value="ipods" onclick="change(this.id)">  iPod  </button>
+<br><button id="printers" name="id" value="printers" onclick="change(this.id)">  Services  </button>
+<br><button id="accessories" name="id" value="accessories" onclick="change(this.id)">  Accessories  </button>
+            </pre>
+        </div>
+        <div class="content" id="content" name="content">
+            <h1 style="text-decoration: overline;color: rgb(247, 0, 255);">~MADE BY~</h1>
+            <pre style="font-weight: bold;font-size: 18px;color: rgb(0, 255, 110);">(Bsc Hons. CS) II YEAR
+Utsav Sharma -- 21/94027
+Sargam Kapoor -- 21/94041
+            </pre>
+        </div>
+        
+    </div>
+    </body>
+    
+</html>

@@ -36,7 +36,7 @@
                 or die("Query failed: ".mysqli_error($connection));
 
                 echo ("<br>");
-                echo ("<h2 style='float: center;color: white;'>MODELS</h1>");
+                echo ("<h2 style='float: center;color: rgb(255, 0, 251);text-decoration:overline;'>MODELS</h2>");
                 echo ("<div style='float: left; border: none;'><ul>");
                 while ($row = mysqli_fetch_array($result)){
                     $sno=$row['Serial_Number'];
