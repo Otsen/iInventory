@@ -19,7 +19,7 @@
                 or die ("Couldn't select database");
 
                 $query = "SELECT * FROM {$tablename} WHERE Serial_Number = {$sno}";
-                // echo($query);
+
                 $result = mysqli_query($connection,$query)
                 or die("Query failed: ".mysqli_error($connection));
         
