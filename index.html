@@ -10,13 +10,13 @@
             $(document).ready(function () {
                 let url="http://localhost/iInventory/content.php?id=";
                 url=url.concat("",id);
+                url=url.concat("&url=",url);
                 $('#content').load(url);
             });
         }
     </script>
     
-    <head>
-        
+    <head>    
         <title>
             Apple-Inventory
         </title>
@@ -30,7 +30,7 @@
             <label class="logolabel" vspace="10px">iInventory</label>
         </div>
         <div class="nav">
-            <pre style="font-size:17px; color: white;"><a href="http://localhost/iInventory/index.html" style="float: center;text-decoration:overline; color: aqua;">HOME</a>  |  <a href="#" style="float: center;text-decoration:overline; color: aqua">ABOUT US</a></pre>
+            <pre style="font-size:17px; color: white;"><a href="http://localhost/iInventory/index.html" style="float: center;text-decoration:overline; color: aqua;">HOME</a>  |  <a href="http://localhost/iInventory/about.html" style="float: center;text-decoration:overline; color: aqua">ABOUT US</a></pre>
         </div>
     </div>
         <div class="sidenav">
