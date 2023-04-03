@@ -10,13 +10,13 @@
             $(document).ready(function () {
                 let url="http://localhost/iInventory/content.php?id=";
                 url=url.concat("",id);
+                url=url.concat("&url=",url);
                 $('#content').load(url);
             });
         }
     </script>
     
-    <head>
-        
+    <head>    
         <title>
             Apple-Inventory
         </title>

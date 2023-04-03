@@ -26,7 +26,7 @@ a{
 div{
     float: left;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.816);
     border-radius: 10px; 
     border: 1px solid antiquewhite;
