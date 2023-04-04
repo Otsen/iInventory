@@ -31,16 +31,23 @@
     <body>
         <div style="align-items: center;height:99.7%;width:99.8%;border:none;" id="material">
             <h2 style='float: center;color: rgb(255, 0, 251);text-decoration:overline;'>MODELS</h2>
-            <select style="background: rgba(255, 255, 255, 0);font-size:15px;color:white;border:none;border-radius:20px;" name="<?php echo ($_REQUEST['url']);?>" id="<?php echo ($_REQUEST['id']);?>" onchange="filter(this.value,this.name,this.id)">
-                <option value="Serial_Number" selected>Default</option>    
+            <select style="background: rgba(255, 255, 255, 0);font-size:15px;color:white;border:2px solid rgb(255, 103, 0);border-radius:20px;" name="<?php echo ($_REQUEST['url']);?>" id="<?php echo ($_REQUEST['id']);?>" onchange="filter(this.value,this.name,this.id)">
                 <option value="Price">Price &uarr;</option>
+                <option value="PriceD">Price &darr;</option>
                 <option value="Release_Date">Release Date &uarr;</option>
-                <option value="Serial_Number">Serial Number &uarr;</option>
+                <option value="Release_DateD">Release Date &darr;</option>
+                <option value="Serial_Number" selected>Serial Number &uarr;</option>
             </select>
             <?php
                 $filter=$_REQUEST['filter'];
                 if($filter==""){
                     $filter="Serial_Number";
+                }
+                if($filter=="Release_DateD"){
+                    $filter="Release_Date desc";
+                }
+                if($filter=="PriceD"){
+                    $filter="Price desc";
                 }
                 echo("<br><br>Sorted By: ".$filter);
                 $tablename = $_REQUEST['id'];
@@ -51,6 +58,7 @@
                 or die ("Couldn't select database");
 
                 $query = "SELECT * FROM ".$tablename." order by ".$filter;
+                // echo($query);
                 $result = mysqli_query($connection,$query)
                 or die("Query failed: ".mysqli_error($connection));
 
